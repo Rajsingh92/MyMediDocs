@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/MyMediDocs",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
