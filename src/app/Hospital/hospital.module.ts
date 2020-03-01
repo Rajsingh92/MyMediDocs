@@ -1,35 +1,35 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from 'src/app/shared/shared.module';
 import { CommonModule } from '@angular/common';
-import { HospitalRoutingModule } from './hospital-routing,module';
-import { HospitalDashboardComponent } from './hospital-dashboard/hospital-dashboard.component';
-import { AddAppointmentComponent } from './add-appointment/add-appointment.component';
-import { AppointmentReportsComponent } from './appointment-reports/appointment-reports.component';
-import { AddDoctorComponent } from './add-doctor/add-doctor.component';
-import { DoctorReportsComponent } from './doctor-reports/doctor-reports.component';
-import { MyAccountComponent } from './my-account/my-account.component';
+import { WardTypeComponent } from './ward-type/ward-type.component';
+import { WardNumberComponent } from './ward-number/ward-number.component';
+import { RoomNumberComponent } from './room-number/room-number.component';
+import { BedNumberComponent } from './bed-number/bed-number.component';
+import { PatientAdmissionComponent } from './patient-admission/patient-admission.component';
+import { BedTransferComponent } from './bed-transfer/bed-transfer.component';
+import { DoctorNotesComponent } from './doctor-notes/doctor-notes.component';
+import { NurseNotesComponent } from './nurse-notes/nurse-notes.component';
+import { PatientVisitorsComponent } from './patient-visitors/patient-visitors.component';
+import { DischargeSummaryComponent } from './discharge-summary/discharge-summary.component';
+import { PatientHistoryComponent } from './patient-history/patient-history.component';
 
 
 
 @NgModule({
   declarations: [
-    HospitalDashboardComponent,
-    AddAppointmentComponent,
-    AppointmentReportsComponent,
-    AddDoctorComponent,
-    DoctorReportsComponent,
-    MyAccountComponent
+    WardTypeComponent, 
+    WardNumberComponent, 
+    RoomNumberComponent, 
+    BedNumberComponent, 
+    PatientAdmissionComponent, 
+    BedTransferComponent, 
+    DoctorNotesComponent, 
+    NurseNotesComponent, 
+    PatientVisitorsComponent, 
+    DischargeSummaryComponent, 
+    PatientHistoryComponent
   ],
   imports: [
-    HospitalRoutingModule,
-    SharedModule,
     CommonModule
-  ],
-  exports: [
- 
-],
-providers:[
-
-]
+  ]
 })
 export class HospitalModule { }

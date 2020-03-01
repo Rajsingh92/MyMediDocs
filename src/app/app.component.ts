@@ -10,7 +10,6 @@ import {  Router } from '@angular/router';
 
 export class AppComponent implements OnInit {
   title = 'MyMediDocs';
-  isLoading:boolean;
   constructor(private router: Router){
    
   }

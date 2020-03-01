@@ -7,18 +7,12 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { SharedModule } from './shared/shared.module';
-import { MediShopModule } from './MediShop/medishop.module';
-import { HospitalModule } from './Hospital/hospital.module';
-import { AdminModule } from './Admin/admin.module';
-import { LanguageTranslationModule } from './shared/modules/language-translation/language-translation.module';
-import { AuthModule } from './Auth/auth.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ThemeModule } from './shared/modules/theme/theme.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,15 +20,9 @@ import { ThemeModule } from './shared/modules/theme/theme.module';
     BrowserAnimationsModule,
     CommonModule,
     MDBBootstrapModule.forRoot(),
-    LanguageTranslationModule,
     NgbModule,
-    ThemeModule ,
     
-    AdminModule ,
-    HospitalModule,
-    MediShopModule, 
     SharedModule ,
-    AuthModule,
   ],
   providers: [
    

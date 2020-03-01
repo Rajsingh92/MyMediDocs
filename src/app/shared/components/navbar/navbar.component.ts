@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbDropdownConfig } from '@ng-bootstrap/ng-bootstrap';
-import { TranslateService } from '../../services/translate.service';
-import { ThemeService } from '../../services/theme.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -14,16 +13,14 @@ export class NavbarComponent implements OnInit {
   public iconOnlyToggled = false;
   public sidebarToggled = false;
   
-  constructor(config: NgbDropdownConfig, public translate: TranslateService,private themeService: ThemeService) {
+  constructor(config: NgbDropdownConfig) {
     config.placement = 'bottom-right';
   }
 
   ngOnInit() {
   }
 
-  setLang(lang: string) {
-    this.translate.use(lang).then(() => { });
-  }
+
 
   // toggle sidebar in small devices
   toggleOffcanvas() {
@@ -55,11 +52,5 @@ export class NavbarComponent implements OnInit {
     document.querySelector('#right-sidebar').classList.toggle('open');
   }
 
-  toggleTheme() {
-    if (this.themeService.isDarkTheme()) {
-      this.themeService.setLightTheme();
-    } else {
-      this.themeService.setDarkTheme();
-    }
-  }
+
 }
