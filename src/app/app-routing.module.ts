@@ -16,22 +16,22 @@ const routes: Routes = [
     path: "appointment",
     loadChildren: "src/app/appointment/appointment.module#AppointmentModule"
   },
-  // {
-  //   path: "billing",
-  //   loadChildren: "src/app/billing/billing.module#BillingModule"
-  // },
-  // {
-  //   path: "doctors",
-  //   loadChildren: "src/app/doctors/doctors.module#DoctorsModule"
-  // },
-  // {
-  //   path: "expense",
-  //   loadChildren: "src/app/expense/expense.module#ExpenseModule"
-  // },
-  // {
-  //   path: "hospital",
-  //   loadChildren: "src/app/hospital/hospital.module#HospitalModule"
-  // },
+  {
+    path: "billing",
+    loadChildren: "src/app/billing/billing.module#BillingModule"
+  },
+  {
+    path: "doctors",
+    loadChildren: "src/app/doctors/doctors.module#DoctorsModule"
+  },
+  {
+    path: "expense",
+    loadChildren: "src/app/expense/expense.module#ExpenseModule"
+  },
+  {
+    path: "hospital",
+    loadChildren: "src/app/hospital/hospital.module#HospitalModule"
+  },
   // {
   //   path: "laboratory",
   //   loadChildren: "src/app/laboratory/laboratory.module#LaboratoryModule"

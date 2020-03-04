@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-let ConfigureAppointment = new Schema({
+let Appointment = new Schema({
     SpecializationType: {
         type: String
     },
@@ -28,7 +28,7 @@ let ConfigureAppointment = new Schema({
         type: String
     }
 }, {
-    collection: 'ConfigureAppointment'
+    collection: 'Appointment'
 });
 
-module.exports = mongoose.model('ConfigureAppointment', ConfigureAppointment);
+module.exports = mongoose.model('Appointment', Appointment);

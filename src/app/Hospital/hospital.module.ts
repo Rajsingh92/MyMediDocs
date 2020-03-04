@@ -11,6 +11,7 @@ import { NurseNotesComponent } from './nurse-notes/nurse-notes.component';
 import { PatientVisitorsComponent } from './patient-visitors/patient-visitors.component';
 import { DischargeSummaryComponent } from './discharge-summary/discharge-summary.component';
 import { PatientHistoryComponent } from './patient-history/patient-history.component';
+import { HospitalRoutingModule } from './hospital-routing.module';
 
 
 
@@ -29,7 +30,8 @@ import { PatientHistoryComponent } from './patient-history/patient-history.compo
     PatientHistoryComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    HospitalRoutingModule
   ]
 })
 export class HospitalModule { }

@@ -8,8 +8,7 @@ import { DiagnosticComponent } from './diagnostic/diagnostic.component';
 import { SearchComponent } from './search/search.component';
 import { BillingComponent } from './billing/billing.component';
 import { PerformTestComponent } from './perform-test/perform-test.component';
-
-
+import { LaboratoryRoutingModule } from './laboratory-routing.module';
 
 
 @NgModule({
@@ -24,7 +23,8 @@ import { PerformTestComponent } from './perform-test/perform-test.component';
     PerformTestComponent, 
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LaboratoryRoutingModule
   ]
 })
 export class LaboratoryModule { }

@@ -2,7 +2,7 @@
     <ul class="nav">
      
       <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
-        <a class="nav-link" [routerLink]="[ '/home' ]" routerLinkActive #dashboard="routerLinkActive">
+        <a class="nav-link" [routerLink]="[ '/home/dashboard' ]" routerLinkActive #dashboard="routerLinkActive">
           <span class="menu-title">Dashboard</span>
           <i class="mdi mdi-home menu-icon"></i>
         </a>
@@ -24,7 +24,7 @@
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : ipd.isActive || opd.isActive || particularType.isActive  }">
         <a class="nav-link" (click)="billing = !billing" [attr.aria-expanded]="billing" aria-controls="billing">
           <span class="menu-title">Billing</span>
           <i class="menu-arrow"></i>
@@ -32,14 +32,14 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!billing">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #accordions="routerLinkActive">IPD Billing</a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #buttons="routerLinkActive">OPD Billing</a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #badges="routerLinkActive">Particular Type</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #ipd="routerLinkActive">IPD Billing</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #opd="routerLinkActive">OPD Billing</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #particularType="routerLinkActive">Particular Type</a></li>
           </ul>
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : consultDoctor.isActive || referenceDoctor.isActive   }">
         <a class="nav-link" (click)="doctors = !doctors" [attr.aria-expanded]="doctors" aria-controls="ui-basic">
           <span class="menu-title">Doctors</span>
           <i class="menu-arrow"></i>
@@ -47,14 +47,13 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!doctors">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/doctors/consult-doctor' ]" routerLinkActive="active" #consultDoctor="routerLinkActive">Consult Doctor</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/doctors/reference-doctor' ]" routerLinkActive="active" #referenceDoctor="routerLinkActive">Reference Doctor</a></li>
           </ul>
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : bankDetails.isActive || expenseList.isActive || expenseType.isActive  }">
         <a class="nav-link" (click)="expense = !expense" [attr.aria-expanded]="expense" aria-controls="ui-basic">
           <span class="menu-title">Expense</span>
           <i class="menu-arrow"></i>
@@ -62,14 +61,14 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!expense">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/expense/bank-details' ]" routerLinkActive="active" #bankDetails="routerLinkActive">Bank Details</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/expense/expense-list' ]" routerLinkActive="active" #expenseList="routerLinkActive">Expense List</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/expense/expense-type' ]" routerLinkActive="active" #expenseType="routerLinkActive">Expense Type</a></li>
           </ul>
         </div>
       </li>
  
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : bedNumber.isActive || bedTransfer.isActive || dischargeSummary.isActive || doctorNotes.isActive || nurseNotes.isActive || patientAdmission.isActive || patientHistory.isActive || patientVisitors.isActive || roomNumber.isActive || wardNumber.isActive || wardType.isActive }">
         <a class="nav-link" (click)="hospital = !hospital" [attr.aria-expanded]="hospital" aria-controls="ui-basic">
           <span class="menu-title">Hospital</span>
           <i class="menu-arrow"></i>
@@ -77,9 +76,17 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!hospital">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/bed-number' ]" routerLinkActive="active" #bedNumber="routerLinkActive">Bed Number</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/bed-transfer' ]" routerLinkActive="active" #bedTransfer="routerLinkActive">Bed Transfer</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/discharge-summary' ]" routerLinkActive="active" #dischargeSummary="routerLinkActive">Discharge Summary</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/doctor-notes' ]" routerLinkActive="active" #doctorNotes="routerLinkActive">Doctor Notes</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/nurse-notes' ]" routerLinkActive="active" #nurseNotes="routerLinkActive">Nurse Notes</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/patient-admission' ]" routerLinkActive="active" #patientAdmission="routerLinkActive">Patient Admission</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/patient-history' ]" routerLinkActive="active" #patientHistory="routerLinkActive">Patient History</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/patient-visitors' ]" routerLinkActive="active" #patientVisitors="routerLinkActive">Patient Visitors</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/room-number' ]" routerLinkActive="active" #roomNumber="routerLinkActive">Room Number</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/ward-number' ]" routerLinkActive="active" #wardNumber="routerLinkActive">Ward Number</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/hospital/ward-type' ]" routerLinkActive="active" #wardType="routerLinkActive">Ward Type</a></li>
           </ul>
         </div>
       </li>
