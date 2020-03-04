@@ -1,10 +1,10 @@
-# MyMediDocs
+# MyMediDocs <br>
 
-npm i @angular/cli -g
-git clone https://github.com/Rajsingh92/MyMediDocs
-cd MyMediDocs
-npm i
-ng serve
+npm i @angular/cli -g <br>
+git clone https://github.com/Rajsingh92/MyMediDocs.git  <br>
+cd MyMediDocs  <br>
+npm i <br>
+ng serve <br><br>
 
 
 open localhost:4200 in browser
