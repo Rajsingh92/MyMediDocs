@@ -24,7 +24,7 @@
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : ipd.isActive || opd.isActive || particularType.isActive  }">
+      <!-- <li class="nav-item" [ngClass]="{'active' : ipd.isActive || opd.isActive  }">
         <a class="nav-link" (click)="billing = !billing" [attr.aria-expanded]="billing" aria-controls="billing">
           <span class="menu-title">Billing</span>
           <i class="menu-arrow"></i>
@@ -33,11 +33,10 @@
         <div class="collapse" id="ui-basic" [ngbCollapse]="!billing">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #ipd="routerLinkActive">IPD Billing</a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #opd="routerLinkActive">OPD Billing</a></li>
-            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/ipd-billing' ]" routerLinkActive="active" #particularType="routerLinkActive">Particular Type</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/billing/opd-billing' ]" routerLinkActive="active" #opd="routerLinkActive">OPD Billing</a></li>
           </ul>
         </div>
-      </li>
+      </li> -->
 
       <li class="nav-item" [ngClass]="{'active' : consultDoctor.isActive || referenceDoctor.isActive   }">
         <a class="nav-link" (click)="doctors = !doctors" [attr.aria-expanded]="doctors" aria-controls="ui-basic">
@@ -91,22 +90,9 @@
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
-        <a class="nav-link" (click)="inventory = !inventory" [attr.aria-expanded]="inventory" aria-controls="ui-basic">
-          <span class="menu-title">Inventory</span>
-          <i class="menu-arrow"></i>
-          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-        </a>
-        <div class="collapse" id="ui-basic" [ngbCollapse]="!inventory">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
-          </ul>
-        </div>
-      </li>
+  
    
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <!-- <li class="nav-item" [ngClass]="{'active' : billing.isActive || categoryName.isActive || diagnostic.isActive || newTest.isActive || performTest.isActive || profileMaster.isActive || search.isActive || unitMaster.isActive  }">
         <a class="nav-link" (click)="laboratory = !laboratory" [attr.aria-expanded]="laboratory" aria-controls="ui-basic">
           <span class="menu-title">Laboratory</span>
           <i class="menu-arrow"></i>
@@ -114,14 +100,19 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!laboratory">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/billing' ]" routerLinkActive="active" #billing="routerLinkActive">Billing</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/category-name' ]" routerLinkActive="active" #categoryName="routerLinkActive">Category Name</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/diagnostic' ]" routerLinkActive="active" #diagnostic="routerLinkActive">Diagnostic</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/new-test' ]" routerLinkActive="active" #newTest="routerLinkActive">New Test</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/perform-test' ]" routerLinkActive="active" #performTest="routerLinkActive">Perform Test</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/profile-master' ]" routerLinkActive="active" #profileMaster="routerLinkActive">Profile Master</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/search' ]" routerLinkActive="active" #search="routerLinkActive">Search</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/laboratory/unit-master' ]" routerLinkActive="active" #unitMaster="routerLinkActive">Unit Master</a></li>
           </ul>
         </div>
-      </li>
+      </li> -->
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : addDrug.isActive || addSurgery.isActive || babiesDetails.isActive  || operationSchedule.isActive || surgeryItems.isActive }">
         <a class="nav-link" (click)="operation = !operation" [attr.aria-expanded]="operation" aria-controls="ui-basic">
           <span class="menu-title">Operation</span>
           <i class="menu-arrow"></i>
@@ -129,14 +120,16 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!operation">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/operation/add-drug' ]" routerLinkActive="active" #addDrug="routerLinkActive">Add Drug</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/operation/add-surgery' ]" routerLinkActive="active" #addSurgery="routerLinkActive">Add Surgery</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/operation/babies-details' ]" routerLinkActive="active" #babiesDetails="routerLinkActive">Babies Details</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/operation/operation-schedule' ]" routerLinkActive="active" #operationSchedule="routerLinkActive">Operation Scedule</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/operation/surgery-items' ]" routerLinkActive="active" #surgeryItems="routerLinkActive">Surgery Items</a></li>
           </ul>
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : patientConsultation.isActive || patientRegistration.isActive || prescription.isActive  }">
         <a class="nav-link" (click)="patient = !patient" [attr.aria-expanded]="patient" aria-controls="ui-basic">
           <span class="menu-title">Patient</span>
           <i class="menu-arrow"></i>
@@ -144,14 +137,14 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!patient">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/patient/patient-consultation' ]" routerLinkActive="active" #patientConsultation="routerLinkActive">Patient Consultation</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/patient/patient-registration' ]" routerLinkActive="active" #patientRegistration="routerLinkActive">Patient Registration</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/patient/prescription' ]" routerLinkActive="active" #prescription="routerLinkActive">Prescription</a></li>
           </ul>
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <!-- <li class="nav-item" [ngClass]="{'active' : addBatchDetails.isActive || addDiscount.isActive || addDistributor.isActive || addManufacturer.isActive || addProduct.isActive || addSalestax.isActive || belowStocks.isActive || billing.isActive || doctorPrescription.isActive || expiredProduct.isActive || goingToExpiry.isActive || purchaseEntry.isActive || purchaseReturns.isActive || salesReturns.isActive  }">
         <a class="nav-link" (click)="pharmacy = !pharmacy" [attr.aria-expanded]="pharmacy" aria-controls="ui-basic">
           <span class="menu-title">Pharmacy</span>
           <i class="menu-arrow"></i>
@@ -159,30 +152,27 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!pharmacy">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-batch-details' ]" routerLinkActive="active" #addBatchDetails="routerLinkActive">Add Batch Details</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-discount' ]" routerLinkActive="active" #addDiscount="routerLinkActive">Add Discount</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-distributor' ]" routerLinkActive="active" #addDistributor="routerLinkActive">Add Distributor</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-manufacturer' ]" routerLinkActive="active" #addManufacturer="routerLinkActive">Add Manufacturer</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-product' ]" routerLinkActive="active" #addProduct="routerLinkActive">Add Product</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/add-salestax' ]" routerLinkActive="active" #addSalestax="routerLinkActive">Add Sales Tax</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/below-stocks' ]" routerLinkActive="active" #belowStocks="routerLinkActive">Below Stocks</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/billing' ]" routerLinkActive="active" #billing="routerLinkActive">Billing</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/doctor-prescription-billing' ]" routerLinkActive="active" #doctorPrescription="routerLinkActive">Doctor Prescription</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/expired-product' ]" routerLinkActive="active" #expiredProduct="routerLinkActive">Expired Product</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/going-to-expire' ]" routerLinkActive="active" #goingToExpiry="routerLinkActive">Going To Expiry</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/purchase-entry' ]" routerLinkActive="active" #purchaseEntry="routerLinkActive">Purchase Entry</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/purchase-returns' ]" routerLinkActive="active" #purchaseReturns="routerLinkActive">Purchase Returns</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/pharmacy/sales-returns' ]" routerLinkActive="active" #salesReturns="routerLinkActive">Sales Returns</a></li>
           </ul>
         </div>
-      </li>
+      </li> -->
 
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
-        <a class="nav-link" (click)="reports = !reports" [attr.aria-expanded]="reports" aria-controls="ui-basic">
-          <span class="menu-title">Reports</span>
-          <i class="menu-arrow"></i>
-          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-        </a>
-        <div class="collapse" id="ui-basic" [ngbCollapse]="!reports">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
-          </ul>
-        </div>
-      </li>
 
-      <li class="nav-item" [ngClass]="{'active' : accordions.isActive || buttons.isActive || badges.isActive  }">
+      <li class="nav-item" [ngClass]="{'active' : addDepartment.isActive || branchMaster.isActive || roleMaster.isActive  }">
         <a class="nav-link" (click)="settings = !settings" [attr.aria-expanded]="settings" aria-controls="ui-basic">
           <span class="menu-title">Settings</span>
           <i class="menu-arrow"></i>
@@ -190,9 +180,9 @@
         </a>
         <div class="collapse" id="ui-basic" [ngbCollapse]="!settings">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/accordions" routerLinkActive="active" #accordions="routerLinkActive">Accordions</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/buttons" routerLinkActive="active" #buttons="routerLinkActive">Buttons</a></li>
-            <li class="nav-item"> <a class="nav-link" routerLink="basic-ui/badges" routerLinkActive="active" #badges="routerLinkActive">Badges</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/settings/add-department' ]" routerLinkActive="active" #addDepartment="routerLinkActive">Add Department</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/settings/branch-master' ]" routerLinkActive="active" #branchMaster="routerLinkActive">Branch Master</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/settings/role-master' ]" routerLinkActive="active" #roleMaster="routerLinkActive">Role Master</a></li>
           </ul>
         </div>
       </li>

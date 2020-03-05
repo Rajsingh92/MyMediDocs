@@ -7,7 +7,10 @@ import { BillingRoutingModule } from './billing-routing.module';
 
 
 @NgModule({
-  declarations: [OpdBillingComponent, IpdBillingComponent],
+  declarations: [
+    OpdBillingComponent, 
+    IpdBillingComponent
+  ],
   imports: [
     CommonModule,
     BillingRoutingModule

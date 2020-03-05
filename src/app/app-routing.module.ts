@@ -32,30 +32,30 @@ const routes: Routes = [
     path: "hospital",
     loadChildren: "src/app/hospital/hospital.module#HospitalModule"
   },
-  // {
-  //   path: "laboratory",
-  //   loadChildren: "src/app/laboratory/laboratory.module#LaboratoryModule"
-  // },
-  // {
-  //   path: "operation",
-  //   loadChildren: "src/app/operation/operation.module#OperationModule"
-  // },
-  // {
-  //   path: "patient",
-  //   loadChildren: "src/app/patient/patient.module#PatientModule"
-  // },
-  // // {
-  // //   path: "operation",
-  // //   loadChildren: "src/app/operation/operation.module#PharmacyModule"
-  // // },
+  {
+    path: "laboratory",
+    loadChildren: "src/app/laboratory/laboratory.module#LaboratoryModule"
+  },
+  {
+    path: "operation",
+    loadChildren: "src/app/operation/operation.module#OperationModule"
+  },
+  {
+    path: "patient",
+    loadChildren: "src/app/patient/patient.module#PatientModule"
+  },
+  {
+    path: "pharmacy",
+    loadChildren: "src/app/pharmacy/pharmacy.module#PharmacyModule"
+  },
   // {
   //   path: "reports",
   //   loadChildren: "src/app/reports/reports.module#ReportsModule"
   // },
-  // {
-  //   path: "settings",
-  //   loadChildren: "src/app/settings/settings.module#SettingsModule"
-  // },
+  {
+    path: "settings",
+    loadChildren: "src/app/settings/settings.module#SettingsModule"
+  },
   {
     path: '**',
     component: PageNotFoundComponent

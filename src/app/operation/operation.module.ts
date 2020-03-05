@@ -5,7 +5,7 @@ import { AddDrugComponent } from './add-drug/add-drug.component';
 import { AddSurgeryComponent } from './add-surgery/add-surgery.component';
 import { SurgeryItemsComponent } from './surgery-items/surgery-items.component';
 import { BabiesDetailsComponent } from './babies-details/babies-details.component';
-
+import { OperationRoutingModule } from './operation-routing.module';
 
 
 @NgModule({
@@ -17,7 +17,8 @@ import { BabiesDetailsComponent } from './babies-details/babies-details.componen
     BabiesDetailsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OperationRoutingModule
   ]
 })
 export class OperationModule { }

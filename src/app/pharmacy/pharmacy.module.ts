@@ -15,6 +15,7 @@ import { DoctorPrescriptionBillingComponent } from './doctor-prescription-billin
 import { BelowStocksComponent } from './below-stocks/below-stocks.component';
 import { GoingToExpireComponent } from './going-to-expire/going-to-expire.component';
 import { ExpiredProductComponent } from './expired-product/expired-product.component';
+import { PharmacyRoutingModule } from './pharmacy-routing.module';
 
 
 
@@ -36,7 +37,8 @@ import { ExpiredProductComponent } from './expired-product/expired-product.compo
     ExpiredProductComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PharmacyRoutingModule
   ]
 })
 export class PharmacyModule { }
