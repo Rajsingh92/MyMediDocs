@@ -10,5 +10,4 @@ ng serve <br><br>
 open localhost:4200 in browser  <br>
 
 
-live [live](https://mymedidocs-e5181.firebaseapp.com/home}
-
+[live](https://mymedidocs-e5181.firebaseapp.com/home)
