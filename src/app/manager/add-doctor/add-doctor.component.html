@@ -1,0 +1,94 @@
+<!-- Breadcrumbs-->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="http://localhost:3000/manager">Manager</a>
+    </li>
+    <li class="breadcrumb-item active">Add Staff - Doctor</li>
+</ol>
+
+<div class="agile-header">
+    <h1>NEW STAFF - DOCTOR</h1>
+    <p>Please fill appropriate and accurate values in each field. The staff would receive an e-mail about this entry.
+    </p>
+</div>
+<!--//header-->
+<!--main-->
+<div class="agileits-main">
+    <div class="wrap">
+        <form method="post">
+            <ul>
+                <li class="text">name : </li>
+                <li><input name="name" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Qualification : </li>
+                <li><input name="qual" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Type : </li>
+                <li><input name="doctype" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Prev Experience : </li>
+                <li><input name="exp" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Salary : </li>
+                <li><input name="salary" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Address : </li>
+                <li><input name="addr" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">City : </li>
+                <li><input name="city" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">State : </li>
+                <li><input name="state" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">E-mail : </li>
+                <li><input name="mail" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Alternate E-mail : </li>
+                <li><input name="amail" type="text"></li>
+            </ul>
+            <ul>
+                <li class="text">Contact : </li>
+                <li><input name="contact" type="text" required></li>
+            </ul>
+            <ul>
+                <li class="text">Alternate Contact : </li>
+                <li><input name="acontact" type="text"></li>
+            </ul>
+            <ul>
+                <li class="text">Gender : </li>
+
+                <select id="select" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </ul>
+            <div class="clear"></div>
+            <div class="agile-submit">
+                <input type="submit" value="submit">
+                <input type="reset" value="reset">
+            </div>
+
+            <ul>
+
+                <li class="error">PLEASE INSERT APPROPRIATE VALUES</li>
+
+
+                <li class="msg">INSERTION SUCCESSFUL</li>
+
+            </ul>
+
+        </form>
+    </div>
+</div>

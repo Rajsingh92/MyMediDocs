@@ -1,0 +1,77 @@
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Doctor</a>
+          </li>
+          <li class="breadcrumb-item active">Account Details</li>
+        </ol>
+        <!-- Example DataTables Card-->
+        <div class="agile-header">
+                <h1>DOCTOR ACCOUNT DETAILS</h1>
+      
+          </div>
+  
+          <ul class="list-group" style="width: 75%; font-size: 20px;">
+          <li class="list-group-item">Name : <label class="ddata"> <%= data.name %> </label></li>
+          <li class="list-group-item">User ID : <label class="ddata"> <%= data.id %> </label></li>
+          <li class="list-group-item">Type : <label class="ddata"> <%= list1[0].type %> </label></li>
+          <li class="list-group-item">Primary E-Mail : <label class="ddata"> <%= data.email %> </label></li>
+          <li class="list-group-item">Qual : <label class="ddata"> <%= list1[0].qual %> </label></li>
+          <li class="list-group-item">Previous Experience : <label class="ddata"> <%= list1[0].exp %> </label></li>
+          <li class="list-group-item">Contact : <label class="ddata"> <%= data.contact %> </label></li>
+          <li class="list-group-item">Gender : <label class="ddata"> <%= data.sex %> </label></li>
+          <li class="list-group-item">Income : <label class="ddata"> Rs. <%= data.salary %> </label></li>
+          <li class="list-group-item">Address : <label class="ddata"> <%= data.address %> </label></li>
+          <li class="list-group-item">City : <label class="ddata"> <%= data.city %> </label></li>
+          <li class="list-group-item">State : <label class="ddata"> <%= state %> </label></li>
+         
+              <li class="list-group-item">Alternate E-mail : <label class="ddata"> <%= amail %> </label></li>
+   
+          
+              <li class="list-group-item">Alternate Contact : <label class="ddata"> <%= acontact %> </label></li>
+
+      </ul>
+  
+      
+  
+      </div>
+  
+      <div style="margin-top: 30px" class="agile-header">
+      <h1 style="font-size: 38px">CHANGE PASSWORD</h1>
+      <p>Please choose a strong password for better security of your account.</p>
+      <div class="agileits-main">
+      <div class="wrap">
+      <form style="width: 50%; margin-left: 250px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Current Password</label>
+      <input name="cpass" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">New Password</label>
+      <input name="npass" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Confirm New Password</label>
+      <input name="cnpass" type="password" class="form-control" id="exampleInputPassword1" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Change</button>
+      </form>
+    
+        <p style="margin-left: 30px; color: red;">Please Try Again</p>
+    
+     
+        <p style="margin-left: 30px; color: green;">Password Changed</p>
+   
+      </div>  
+    </div>
+    </div>
+     
+      
+
+    </div>
+  </body>

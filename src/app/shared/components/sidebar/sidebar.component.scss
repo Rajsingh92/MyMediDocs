@@ -1,15 +1,15 @@
 @import '../../../../styles.scss';
 .sidebar {
- // min-height: calc(100vh - #{$navbar-height});
-  //background: $sidebar-bg;
-  //font-family: $type1-regular;
+  min-height: calc(100vh - #{$navbar-height});
+  background: $sidebar-bg;
+  font-family: $type1-regular;
   padding: 0;
   width: $sidebar-width-lg;
   z-index: 11;
-  // transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  // -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  // -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
-  // -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -moz-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
+  -ms-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
   height: 100%;
 
   .nav {

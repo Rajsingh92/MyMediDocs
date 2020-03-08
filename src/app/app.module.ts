@@ -9,10 +9,20 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SharedModule } from './shared/shared.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EmployeeAddComponent } from './test/employee-add/employee-add.component';
+import { EmployeeEditComponent } from './test/employee-edit/employee-edit.component';
+import { EmployeeGetComponent } from './test/employee-get/employee-get.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    EmployeeAddComponent,
+    EmployeeEditComponent,
+    EmployeeGetComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -21,6 +31,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     MDBBootstrapModule.forRoot(),
     NgbModule,
+
+    FormsModule,
+    ReactiveFormsModule,
     
     SharedModule ,
   ],

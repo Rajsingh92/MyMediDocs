@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { EmployeeEditComponent } from './test/employee-edit/employee-edit.component';
+import { EmployeeAddComponent } from './test/employee-add/employee-add.component';
+import { EmployeeGetComponent } from './test/employee-get/employee-get.component';
+
 
 const routes: Routes = [
   {
@@ -9,57 +13,33 @@ const routes: Routes = [
     pathMatch: "full"
   },
   {
-    path: "home",
-    loadChildren: "src/app/home/home.module#HomeModule"
-  },
-  {
-    path: "appointment",
-    loadChildren: "src/app/appointment/appointment.module#AppointmentModule"
-  },
-  {
-    path: "billing",
-    loadChildren: "src/app/billing/billing.module#BillingModule"
-  },
-  {
     path: "doctors",
     loadChildren: "src/app/doctors/doctors.module#DoctorsModule"
   },
   {
-    path: "expense",
-    loadChildren: "src/app/expense/expense.module#ExpenseModule"
-  },
-  {
-    path: "hospital",
-    loadChildren: "src/app/hospital/hospital.module#HospitalModule"
-  },
-  {
-    path: "laboratory",
-    loadChildren: "src/app/laboratory/laboratory.module#LaboratoryModule"
-  },
-  {
-    path: "operation",
-    loadChildren: "src/app/operation/operation.module#OperationModule"
-  },
-  {
-    path: "patient",
-    loadChildren: "src/app/patient/patient.module#PatientModule"
-  },
-  {
-    path: "pharmacy",
-    loadChildren: "src/app/pharmacy/pharmacy.module#PharmacyModule"
-  },
-  // {
-  //   path: "reports",
-  //   loadChildren: "src/app/reports/reports.module#ReportsModule"
-  // },
-  {
-    path: "settings",
-    loadChildren: "src/app/settings/settings.module#SettingsModule"
+    path: "manager",
+    loadChildren: "src/app/manager/manager.module#ManagerModule"
   },
   {
     path: '**',
     component: PageNotFoundComponent
   },
+  {
+    path: 'product/create',
+    component: EmployeeAddComponent,
+    
+  },
+  {
+    path: 'edit/:id',
+    component: EmployeeEditComponent,
+    
+  },
+  {
+    path: 'products',
+    component: EmployeeGetComponent,
+
+  },
+  
 ];
 
 @NgModule({
