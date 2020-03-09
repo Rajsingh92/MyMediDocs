@@ -8,7 +8,6 @@ const cors = require('cors');
 const passport = require('passport');
 
 const rtsIndex = require('./routes/index.router');
-const productRoute = require('./routes/product.route');
 const employeeRoute = require('./routes/employee.route');
 
 var app = express();
@@ -18,7 +17,6 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
-app.use('/products', productRoute);
 app.use('/employees', employeeRoute);
 
 // error handler
