@@ -29,6 +29,20 @@
         </div>
       </li>
 
+      <li class="nav-item" [ngClass]="{'active' : complain.isActive || home.isActive  }">
+        <a class="nav-link" (click)="landing = !landing" [attr.aria-expanded]="landing" aria-controls="ui-basic">
+          <span class="menu-title">landing</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!landing">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/landing/complain' ]" routerLinkActive="active" #complain="routerLinkActive">Complain</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/landing/home' ]" routerLinkActive="active" #home="routerLinkActive">Home</a></li>
+          </ul>
+        </div>
+      </li>
+
   
 
     </ul>

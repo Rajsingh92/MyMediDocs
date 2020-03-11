@@ -1,1 +1,71 @@
-<p>p-complaint works!</p>
+
+    <!-- Navigation-->
+  
+    <div style="margin-left: 1750px; margin-top: 15px;">
+      <button onclick="window.print()" type="button" class="btn btn-outline-dark">Print</button>
+    </div>
+    
+    <div id="print" class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+       
+        <!-- Example DataTables Card-->
+        <div class="agile-header">
+                <h1>COMPLAINT</h1>
+      
+          </div>
+  
+          <div>
+            
+            <form style="width: 75%; margin-left: 80px; font-weight: bold;">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Complaint ID :</label>
+      <div class="col-sm-10">
+        <input value="<%= list[0].id %>" type="text" class="form-control" id="inputEmail3" placeholder="Complaint ID" name = "cid" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Date Of Submission :</label>
+      <div class="col-sm-10">
+        <input value="<%= list[0].dof.getDate() %> - <%= list[0].dof.getMonth() + 1 %> - <%=list[0].dof.getFullYear() %>" type="text" class="form-control" id="inputPassword3" placeholder="Date Of Submission" name="dof" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Name :</label>
+      <div class="col-sm-10">
+        <input value="<%= list[0].name %>" type="text" class="form-control" id="inputPassword3" placeholder="Name" name="name" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Type Of Complaint :</label>
+      <div class="col-sm-10">
+        <input value="<%= list[0].type %>" type="text" class="form-control" id="inputPassword3" placeholder="Type Of Complaint" name="type" disabled>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputPassword3" class="col-sm-2 col-form-label">Description :</label>
+      <div class="col-sm-10">
+        <textarea value="<%= list[0].medicines %>" class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Description" name="desc" disabled><%= list[0].description %></textarea>
+      </div>
+    </div>
+  </form>
+  
+          </div>
+    <!--//header-->
+    <!--main-->
+  
+    
+  
+  
+       
+  
+  
+  
+        
+      </div>
+  
+      
+     
+  
+     
+    </div>

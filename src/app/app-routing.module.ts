@@ -21,24 +21,13 @@ const routes: Routes = [
     loadChildren: "src/app/manager/manager.module#ManagerModule"
   },
   {
+    path: "landing",
+    loadChildren: "src/app/landing/landing.module#LandingModule"
+  },
+  {
     path: '**',
     component: PageNotFoundComponent
-  },
-  {
-    path: 'product/create',
-    component: EmployeeAddComponent,
-    
-  },
-  {
-    path: 'edit/:id',
-    component: EmployeeEditComponent,
-    
-  },
-  {
-    path: 'products',
-    component: EmployeeGetComponent,
-
-  },
+  }
   
 ];
 

@@ -1,1 +1,56 @@
-<p>complaints works!</p>
+<div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="http://localhost:3000/manager">Manager</a>
+        </li>
+        <li class="breadcrumb-item active">Complaints</li>
+      </ol>
+      <!-- Example DataTables Card-->
+      <div class="card mb-3">
+        <div class="card-header">
+          <i class="fa fa-table"></i> Complaint List
+        </div>
+
+        <div class="card-body">
+          <div class="table-responsive">
+
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+
+              <thead>
+                <tr>
+                  <th>Complaint ID</th>
+                  <th>Date Of Submission</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tfoot>
+                <tr>
+                  <th>Complaint ID</th>
+                  <th>Date Of Submission</th>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Action</th>
+                </tr>
+              </tfoot>
+              <tbody>
+               
+                    <tr>
+                      <td><%= list[i].id %></td>
+                      <td><%= list[i].dof.getDate() %> - <%= list[i].dof.getMonth() + 1 %> - <%=list[0].dof.getFullYear() %></td>
+                      <td><%= list[i].name %></td>
+                      <td><%= list[i].type %></td>
+                      <td align="center"><a style="color: blue;" href="http://localhost:3000/manager/complaints/show?year=<%= list[i].dof.getFullYear() %>&month=<%= list[i].dof.getMonth() + 1 %>&date=<%= list[i].dof.getDate() %>&id=<%= list[i].id %>">View</a></td>
+                      
+                    </tr>
+               
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>

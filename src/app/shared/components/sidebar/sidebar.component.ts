@@ -8,18 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
 
 
-  public billing = false;
-  public appointment = false;
+
+
   public doctors = false;
-  public expense = false;
-  public hospital = false;
-  public inventory = false;
-  public laboratory = false;
-  public operation = false;
-  public patient = false;
-  public pharmacy = false;
-  public reports = false;
-  public settings = false;
+  public landing = false;
+ 
 
   
   constructor() { }

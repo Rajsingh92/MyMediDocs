@@ -1,1 +1,115 @@
-<p>dashboard works!</p>
+
+  
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Manager</a>
+          </li>
+          <li class="breadcrumb-item active">My Dashboard</li>
+        </ol>
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> Hospital Staff
+          </div>
+  
+          
+          <div class="card-body">
+            <div class="table-responsive">
+  
+              <table class="table table-bordered" id="dataTable1" width="100%" cellspacing="0">
+  
+                <thead>
+                  <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Income</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Income</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                
+                      <tr>
+                        <td><%= list[i].id %></td>
+                        <td><%= list[i].name %></td>
+                        <td><%= list[i].type %></td>
+                        <td><%= list[i].contact %></td>
+                        <td><%= list[i].email %></td>
+                        <td><%= list[i].salary %></td>
+                      </tr>
+               
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+  
+  
+      </div>
+  
+      <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> Hospital Doctor Details
+          </div>
+  
+          
+          <div class="card-body">
+            <div class="table-responsive">
+  
+              <table class="table table-bordered" id="dataTable2" width="100%" cellspacing="0">
+  
+                <thead>
+                  <tr>
+                    <th>Doctor ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Income</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Contact</th>
+                    <th>Email</th>
+                    <th>Income</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                 
+                      <tr>
+                        <td><%= list1[i].id %></td>
+                        <td><%= list1[i].name %></td>
+                        <td><%= list1[i].dtype %></td>
+                        <td><%= list1[i].contact %></td>
+                        <td><%= list1[i].email %></td>
+                        <td><%= list1[i].salary %></td>
+                      </tr>
+           
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+  
+    
+     
+    </div>
+  

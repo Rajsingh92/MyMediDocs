@@ -1,1 +1,85 @@
-<p>stats works!</p>
+
+
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Manager</a>
+          </li>
+          <li class="breadcrumb-item active">Stats and Settings</li>
+        </ol>
+        
+          <div class="agile-header">
+                <h1>GENERAL STATISTICS</h1>
+      
+          </div>
+    <!--//header-->
+    <!--main-->
+      <form style="width: 30%; margin-left: 560px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Patients Visited Today:</label>
+      <input name="cpass" type="text" class="form-control" value="<%= ptoday %>" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Patients Visited This Month:</label>
+      <input name="npass" type="text" class="form-control" value="<%= pmonth %>" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">General Wards Occupied:</label>
+      <input name="cnpass" type="text" class="form-control" value="<%= goc %>" id="exampleInputPassword1" disabled>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Personal Rooms Occupied:</label>
+      <input name="cnpass" type="text" class="form-control" value="<%= poc %>" id="exampleInputPassword1" disabled>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Total Employee Income:</label>
+      <input name="cnpass" type="text" class="form-control" value="<%= income %>" id="exampleInputPassword1" disabled>
+    </div>
+     <div class="form-group">
+      <label for="exampleInput">Month Revenue:</label>
+      <input name="cnpass" type="text" class="form-control" value="<%= revenue %>" id="exampleInputPassword1" disabled>
+    </div> 
+      </form>
+  
+  
+        
+      </div>
+  
+      <div style="margin-top: 30px" class="agile-header">
+      <h1 style="font-size: 38px">SERVER SETTINGS</h1>
+      <p>Please enter valid details for proper functioning.</p>
+      <div class="agileits-main">
+      <div class="wrap">
+      <form style="width: 50%; margin-left: 250px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Server Email ID:</label>
+      <input name="email" value="<%= server.email %>" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Mail Service has been Disbaled">
+      <label style="font-size: 15px;" for="exampleInput">Leave Empty to disable mailing system</label>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Password</label>
+      <input name="pass" type="password" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Password">
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">PROXY:PORT (Enter System Proxy)</label>
+      <input name="proxy" type="text" value="<%= server.proxy %>" class="form-control" id="exampleInputPassword1" placeholder="No Proxy has been Set.">
+      <label style="font-size: 15px;" for="exampleInput">Leave empty to disable proxy</label>
+    </div>
+    <button type="submit" class="btn btn-primary">UPDATE</button>
+      </form>
+     
+        <p style="margin-left: 30px; color: red;">Please Try Again</p>
+    
+        <p style="margin-left: 30px; color: green;">Details Updated</p>
+
+      </div>  
+    </div>
+    </div>
+     
+     
+  
+    
+    </div>
+ 
