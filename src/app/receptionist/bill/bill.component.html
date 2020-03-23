@@ -1,1 +1,95 @@
-<p>bill works!</p>
+<!-- Navigation-->
+
+<div style="margin-left: 1750px; margin-top: 15px;">
+    <button onclick="window.print()" type="button" class="btn btn-outline-dark">Print</button>
+
+</div>
+
+<div id="print" class="content-wrapper">
+    <div class="container-fluid">
+        <!-- Breadcrumbs-->
+
+        <!-- Example DataTables Card-->
+        <div class="agile-header">
+            <h1>PATIENT BILL</h1>
+
+        </div>
+
+        <div>
+
+            <form style="width: 75%; margin-left: 80px; font-weight: bold;">
+                <div class="form-group row">
+                    <label for="inputEmail3" class="col-sm-2 col-form-label">Patient ID :</label>
+                    <div class="col-sm-10">
+                        <input value="<%= list[0].id %>" type="text" class="form-control" id="inputEmail3"
+                            placeholder="Patient ID" name="pid" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Patient Name :</label>
+                    <div class="col-sm-10">
+                        <input value="<%= list[0].name %>" type="text" class="form-control" id="inputPassword3"
+                            placeholder="Patint Name" name="pname" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Date of Appointment :</label>
+                    <div class="col-sm-10">
+                        <input
+                            value="<%= list[0].doa.getDate() %> - <%= list[0].doa.getMonth() + 1 %> - <%=list[0].doa.getFullYear()%>"
+                            type="text" class="form-control" id="inputPassword3" placeholder="Date Of Appointment"
+                            name="doa" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Hospital Fee :</label>
+                    <div class="col-sm-10">
+                        <input value="<%= list[0].m_fee %>" type="text" class="form-control" placeholder="Hospital Fee"
+                            id="m_fee" name="m_fee" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Doctor Fee :</label>
+                    <div class="col-sm-10">
+                        <input value="<%= list[0].d_fee %>" type="text" class="form-control" id="inputPassword3"
+                            placeholder="Doctor Fee" name="d_fee" id="d_fee" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Chemist Fee :</label>
+                    <div class="col-sm-10">
+                        <input value="<%= list[0].c_fee %>" type="text" class="form-control" placeholder="Chemist Fee"
+                            name="c_fee" id="c_fee" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Total Fee :</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Total Fee" name="doa" id="t_fee" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Tax :</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Tax" name="doa" id="tax" disabled>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="inputPassword3" class="col-sm-2 col-form-label">Total Amount :</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" placeholder="Total Amount" name="doa" id="ffee"
+                            disabled>
+                    </div>
+                </div>
+            </form>
+
+
+        </div>
+        <!--//header-->
+        <!--main-->
+
+        <hr>
+
+    </div>
+
+</div>

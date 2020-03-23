@@ -1,1 +1,130 @@
-<p>hardware works!</p>
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Maintenance Staff</a>
+          </li>
+          <li class="breadcrumb-item active">Hardware List</li>
+        </ol>
+        <!-- Example DataTables Card-->
+        <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> Hardware List
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+  
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  
+                <thead>
+                  <tr style="font-weight: bold;">
+                    <th>Hardware Model</th>
+                    <th>Hardware Type</th>
+                    <th>Quantity</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr style="font-weight: bold;">
+                    <th>Hardware Model</th>
+                    <th>Hardware Type</th>
+                    <th>Quantity</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                 
+                      <tr>
+                        <td><%= list[i].model %></td>
+                        <td><%= list[i].type %></td>
+                        <td><%= list[i].quantity %></td>
+                      </tr>
+                 
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+  
+      <div style="margin-top: 30px" class="agile-header">
+      <h1 style="font-size: 38px">ADD NEW HARDWARE</h1>
+      <p>Please make sure to enter accurate details.</p>
+      <div class="agileits-main">
+        <div class="wrap">
+      <form action="http://localhost:3000/mstaff/hardware/add" style="width: 30%; margin-left: 325px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Hardware Model</label>
+      <input name="model" type="text" placeholder="Model" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Hardware Type</label>
+      <input name="type" type="text" placeholder="Type" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Quantity</label>
+      <input name="quantity" type="number" min="1" placeholder="1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">ADD</button>
+      </form>
+     
+        <label style="color: red;">HARDWARE MODEL ALREADY EXISTS. PLEASE MODIFY ITS DETAILS.</label>
+      
+        <label style="color: red;">HARDWARE INSERTED SUCCESSFULLY</label>
+  
+      
+      </div> 
+    </div>
+    </div>
+  
+      <div style="margin-top: 0px" class="agile-header">
+      <h1 style="font-size: 38px">MODIFY HARDWARE DETAILS</h1>
+      <p>Please make sure to enter accurate details. Setting quantity to 0 would erase the hardware from the list.</p>
+      <div class="agileits-main">
+      
+        <div class="wrap">
+      <form action="http://localhost:3000/mstaff/hardware/details" style="width: 30%; margin-left: 325px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Hardware Model</label>
+      <input name="model" type="text" placeholder="Model" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+    </div>
+    <button type="submit" class="btn btn-primary">View Details</button>
+      </form>
+    
+        <label style="color: red;">HARDWARE MODEL DOES NOT EXISTS. PLEASE ADD IT BEFORE MODIFYING.</label>
+    
+        <label style="color: green;">HARDWARE DETAILS CHANGED</label>
+   
+      </div> 
+      
+    </div>
+  
+     
+  
+        <div class="agileits-main">
+        <div class="wrap">
+      <form action="http://localhost:3000/mstaff/hardware/save" style="width: 30%; margin-left: 325px;" method="post">
+    <div class="form-group">
+      <label for="exampleInput">Hardware Model</label>
+      <input name="model" type="text" value="<%= hmodel %>" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" disabled>
+    </div>
+    <div class="form-group">
+      <label for="exampleInput">Quantity</label>
+      <input name="quantity" type="number" value="<%= qty %>" min="0" placeholder="Model" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+    </div>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+      </form>
+      </div> 
+    </div>
+  
+     
+  
+    </div>
+      
+      
+  
+  
+    </div>
+ 

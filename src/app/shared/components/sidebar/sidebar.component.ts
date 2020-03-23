@@ -12,6 +12,10 @@ export class SidebarComponent implements OnInit {
 
   public doctors = false;
   public landing = false;
+  public manager = false;
+  public nurse = false;
+  public mstaff = false;
+  public receptionist = false;
  
 
   

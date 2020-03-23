@@ -17,12 +17,24 @@ const routes: Routes = [
     loadChildren: "src/app/doctors/doctors.module#DoctorsModule"
   },
   {
+    path: "landing",
+    loadChildren: "src/app/landing/landing.module#LandingModule"
+  },
+  {
     path: "manager",
     loadChildren: "src/app/manager/manager.module#ManagerModule"
   },
   {
-    path: "landing",
-    loadChildren: "src/app/landing/landing.module#LandingModule"
+    path: "mstaff",
+    loadChildren: "src/app/mstaff/mstaff.module#MstaffModule"
+  },
+  {
+    path: "nurse",
+    loadChildren: "src/app/nurse/nurse.module#NurseModule"
+  },
+  {
+    path: "receptionist",
+    loadChildren: "src/app/receptionist/receptionist.module#ReceptionistModule"
   },
   {
     path: '**',

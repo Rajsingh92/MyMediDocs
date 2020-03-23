@@ -1,24 +1,24 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
      
-      <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+      <!-- <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
         <a class="nav-link" [routerLink]="[ '/home/dashboard' ]" routerLinkActive #dashboard="routerLinkActive">
           <span class="menu-title">Dashboard</span>
           <i class="mdi mdi-home menu-icon"></i>
         </a>
-      </li>
+      </li> -->
 
       
 
   
 
       <li class="nav-item" [ngClass]="{'active' : dashboard.isActive || appointment.isActive || patients.isActive || settings.isActive || p_reports.isActive  }">
-        <a class="nav-link" (click)="doctors = !doctors" [attr.aria-expanded]="doctors" aria-controls="ui-basic">
+        <a class="nav-link" (click)="doctors = !doctors" [attr.aria-expanded]="doctors" aria-controls="doctors">
           <span class="menu-title">Doctors</span>
           <i class="menu-arrow"></i>
           <i class="mdi mdi-crosshairs-gps menu-icon"></i>
         </a>
-        <div class="collapse" id="ui-basic" [ngbCollapse]="!doctors">
+        <div class="collapse" id="doctors" [ngbCollapse]="!doctors">
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/doctors/dashboard' ]" routerLinkActive="active" #dashboard="routerLinkActive">Dashboard</a></li>
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/doctors/appointment' ]" routerLinkActive="active" #appointment="routerLinkActive">Appointment</a></li>
@@ -39,6 +39,82 @@
           <ul class="nav flex-column sub-menu">
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/landing/complain' ]" routerLinkActive="active" #complain="routerLinkActive">Complain</a></li>
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/landing/home' ]" routerLinkActive="active" #home="routerLinkActive">Home</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item" [ngClass]="{'active' : addDoctor.isActive || addMstaff.isActive || addNurse.isActive  || addRec.isActive  || complaints.isActive || dashboard.isActive  || modify.isActive  || pComplaint.isActive  || settings.isActive  || stats.isActive }">
+        <a class="nav-link" (click)="manager = !manager" [attr.aria-expanded]="manager" aria-controls="ui-basic">
+          <span class="menu-title">manager</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!manager">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/add-doctor' ]" routerLinkActive="active" #addDoctor="routerLinkActive">add-doctor</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/add-mstaff' ]" routerLinkActive="active" #addMstaff="routerLinkActive">add-mstaff</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/add-nurse' ]" routerLinkActive="active" #addNurse="routerLinkActive">add-nurse</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/add-rec' ]" routerLinkActive="active" #addRec="routerLinkActive">add-rec</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/complaints' ]" routerLinkActive="active" #complaints="routerLinkActive">complaints</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/dashboard' ]" routerLinkActive="active" #dashboard="routerLinkActive">dashboard</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/modify' ]" routerLinkActive="active" #modify="routerLinkActive">modify</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/p-complaint' ]" routerLinkActive="active" #pComplaint="routerLinkActive">p-complaint</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/settings' ]" routerLinkActive="active" #settings="routerLinkActive">settings</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/manager/stats' ]" routerLinkActive="active" #stats="routerLinkActive">stats</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item" [ngClass]="{'active' : dashboard.isActive || hardware.isActive || settings.isActive  }">
+        <a class="nav-link" (click)="mstaff = !mstaff" [attr.aria-expanded]="mstaff" aria-controls="ui-basic">
+          <span class="menu-title">mstaff</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!mstaff">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/mstaff/dashboard' ]" routerLinkActive="active" #dashboard="routerLinkActive">dashboard</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/mstaff/hardware' ]" routerLinkActive="active" #hardware="routerLinkActive">hardware</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/mstaff/settings' ]" routerLinkActive="active" #settings="routerLinkActive">settings</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item" [ngClass]="{'active' : dashboard.isActive || pReport.isActive || patients.isActive || settings.isActive }">
+        <a class="nav-link" (click)="nurse = !nurse" [attr.aria-expanded]="nurse" aria-controls="ui-basic">
+          <span class="menu-title">nurse</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!nurse">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/nurse/dashboard' ]" routerLinkActive="active" #dashboard="routerLinkActive">dashboard</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/nurse/p-report' ]" routerLinkActive="active" #pReport="routerLinkActive">p-report</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/nurse/patients' ]" routerLinkActive="active" #patients="routerLinkActive">patients</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/nurse/settings' ]" routerLinkActive="active" #settings="routerLinkActive">settings</a></li>
+          </ul>
+        </div>
+      </li>
+
+      
+
+      <li class="nav-item" [ngClass]="{'active' : admin.isActive || bill.isActive || curr.isActive  || dashboard.isActive  || complaints.isActive || dashboard.isActive  || emergency.isActive  || newpatient.isActive  || pReport.isActive  || report.isActive  || setting.isActive}">
+        <a class="nav-link" (click)="receptionist = !receptionist" [attr.aria-expanded]="receptionist" aria-controls="ui-basic">
+          <span class="menu-title">receptionist</span>
+          <i class="menu-arrow"></i>
+          <i class="mdi mdi-crosshairs-gps menu-icon"></i>
+        </a>
+        <div class="collapse" id="ui-basic" [ngbCollapse]="!receptionist">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/admin' ]" routerLinkActive="active" #admin="routerLinkActive">admin</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/bill' ]" routerLinkActive="active" #bill="routerLinkActive">bill</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/curr' ]" routerLinkActive="active" #curr="routerLinkActive">curr</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/dashboard' ]" routerLinkActive="active" #dashboard="routerLinkActive">dashboard</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/emergency' ]" routerLinkActive="active" #emergency="routerLinkActive">emergency</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/newpatient' ]" routerLinkActive="active" #newpatient="routerLinkActive">newpatient</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/p-report' ]" routerLinkActive="active" #pReport="routerLinkActive">p-report</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/report' ]" routerLinkActive="active" #report="routerLinkActive">report</a></li>
+            <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/receptionist/setting' ]" routerLinkActive="active" #setting="routerLinkActive">setting</a></li>
           </ul>
         </div>
       </li>

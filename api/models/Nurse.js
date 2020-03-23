@@ -5,40 +5,40 @@ const Schema = mongoose.Schema;
 // Define collection and schema for Doctor
 let Nurse = new Schema({
   Name: {
-    type: Text
+    type: String
   },
   Qualification: {
-    type: Text
+    type: String
   },
   PrevExperience: {
-    type: Text
+    type: String
   },
   Salary: {
-    type: Text
+    type: String
   },
   Email: {
-    type: Text
+    type: String
   },
   AlternateEmail: {
-    type: Text
+    type: String
   },
   Contact: {
-    type: Text
+    type: String
   },
   AlternateContact: {
-    type: Text
+    type: String
   },
   Address: {
-    type: Text
+    type: String
   },
   City: {
-    type: Text
+    type: String
   },
   State: {
-    type: Text
+    type: String
   },
   Gender: {
-    type: Text
+    type: String
   },
  
 },{

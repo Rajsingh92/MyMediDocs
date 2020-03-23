@@ -11,6 +11,7 @@ import { PComplaintComponent } from './p-complaint/p-complaint.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StatsComponent } from './stats/stats.component';
 import { ManagerRoutingModule } from './manager-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -29,7 +30,8 @@ import { ManagerRoutingModule } from './manager-routing.module';
   ],
   imports: [
     CommonModule,
-    ManagerRoutingModule
+    ManagerRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class ManagerModule { }

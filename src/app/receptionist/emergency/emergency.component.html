@@ -1,1 +1,151 @@
-<p>emergency works!</p>
+
+  
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Receptionist</a>
+          </li>
+          <li class="breadcrumb-item active">Emergency</li>
+        </ol>
+        <!-- Example DataTables Card-->
+        <div class="agile-header">
+                <h1 style="color: red;">EMERGENCY</h1>
+      
+          </div>
+  
+          <div>
+            <form method="post" style="width: 50%; margin-left: 400px;">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Name:</label>
+      <input type="text" name="name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name" required>
+    </div>
+    <button type="submit" class="btn btn-outline-dark" style="width: 30%; margin-left: 265px;">ADMIT</button>
+  </form>
+          </div>
+          
+        
+              <div style="text-align: center;">
+                <label style="color: green;">Patient ID: <%= pid %> Doctor: <%= doc %></label>
+              </div>
+        
+  
+      </div>
+  
+      <div class="card mb-3">
+          <div class="card-header">
+            <i class="fa fa-table"></i> List of Current Patients
+          </div>
+  
+          <div class="card-body">
+            <div class="table-responsive">
+  
+              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+  
+                <thead>
+                  <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Date Of Appointment</th>
+                    <th>Doctor ID</th>
+                    <th>Doctor Name</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <th>Patient ID</th>
+                    <th>Patient Name</th>
+                    <th>Date Of Appointment</th>
+                    <th>Doctor ID</th>
+                    <th>Doctor Name</th>
+                  </tr>
+                </tfoot>
+                <tbody>
+                 
+                      <tr>
+                        <td><%= list[i].id %></td>
+                        <td><%= list[i].name %></td>
+                        <td><%= list[i].doa.getDate() %> - <%= list[i].doa.getMonth() + 1 %> - <%=list[i].doa.getFullYear()%></td>
+                        <td><%= list[i].d_id %></td>
+                        <td><%= list[i].d_name %></td>
+                      </tr>
+                
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+  
+        <div class="agile-header">
+                <h1>ADMIT EMERGENCY PATIENT</h1>
+                <p>The patient name should be enrolled as an emergency patient before proceeding.</p>
+          </div>
+  
+          <div>
+            
+            <form method="post" action="http://localhost:3000/receptionist/eadmit" style="width: 50%; margin-left: 400px;">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Patient ID:</label>
+      <input type="text" name="pid" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Patient ID" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Date Of Appointment:</label>
+      <input type="date" name="doa" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Date Of Appointment" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Gender:</label>
+      <select name="sex" class="form-control" id="exampleSelect1">
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Room Type:</label>
+      <select name="room" class="form-control" id="exampleSelect1">
+        <option>General</option>
+        <option>Personal</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Contact</label>
+      <input name="contact" type="Integer" class="form-control" id="exampleInputPassword1" placeholder="Contact (10 digits)" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleTextarea">Address:</label>
+      <textarea name="address" class="form-control" id="exampleTextarea" rows="3" placeholder="Enter Address (200 words)" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">City:</label>
+      <input type="text" name="city" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter City" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">State:</label>
+      <input type="text" name="state" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter State" required>
+    </div>
+    <button type="submit" class="btn btn-outline-dark" style="width: 30%; margin-left: 265px;">Admit Patient</button>
+  </form>
+  
+         
+  
+          </div>
+  
+        
+              <div>
+                <label style="color: red; text-align: center; margin-left: 430px;">INVALID. Please make sure the patient is an emergency patient and the details filled in are appropriate.</label>
+              </div>
+          
+              <div>
+                <label style="color: green; text-align: center; margin-left: 700px;">Patient Details Updated</label>
+              </div>
+          
+              <div>
+                <label style="color: red; text-align: center; margin-left: 700px;">Could not get a room</label>
+              </div>
+            
+    
+      </div>
+     
+  
+ 

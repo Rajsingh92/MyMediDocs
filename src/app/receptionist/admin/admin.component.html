@@ -1,1 +1,55 @@
-<p>admin works!</p>
+
+    <div class="content-wrapper">
+      <div class="container-fluid">
+        <!-- Breadcrumbs-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="http://localhost:3000/manager">Receptionist</a>
+          </li>
+          <li class="breadcrumb-item active">Admit Patient</li>
+        </ol>
+        <!-- Example DataTables Card-->
+        <div class="agile-header">
+                <h1>ADMIT PATIENT</h1>
+  <p>The patient must have had an appointment before being admitted.</p>
+      
+          </div>
+  
+          <div>
+            <form method="post" style="width: 30%; margin-left: 550px;">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Patient ID:</label>
+      <input type="text" name="pid" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Date Of Appointment:</label>
+      <input type="date" name="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID" required>
+    </div>
+    <div class="form-group">
+      <label for="exampleSelect1">Room Type:</label>
+      <select name="room" class="form-control" id="exampleSelect1">
+        <option>General</option>
+        <option>Personal</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-outline-dark" style="width: 30%; margin-left: 160px; margin-top: 30px;">Admit</button>
+  </form>
+  
+       
+        
+            <label style="color: red; margin-left: 670px;">PATIENT RECORD DOES NOT EXIST</label>
+         
+            <label style="color: red; margin-left: 650px;">NO ROOMS AVAILABLE IN THIS CATEGORY</label>
+       
+            <label style="color: green; margin-left: 736px;">ROOM ID: <%= rid %></label>
+        
+  
+      </div>
+          
+  
+      </div>
+     
+    
+      
+    </div>
+ 
