@@ -1,15 +1,13 @@
 
   
-    <div class="content-wrapper">
-      <div class="container-fluid">
-        <!-- Breadcrumbs-->
+<!--    
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
             <a href="http://localhost:3000/manager">Manager</a>
           </li>
           <li class="breadcrumb-item active">My Dashboard</li>
         </ol>
-        <!-- Example DataTables Card-->
+        
         <div class="card mb-3">
           <div class="card-header">
             <i class="fa fa-table"></i> Hospital Staff
@@ -59,7 +57,7 @@
         </div>
   
   
-      </div>
+     
   
       <div class="card mb-3">
           <div class="card-header">
@@ -107,9 +105,34 @@
               </table>
             </div>
           </div>
-        </div>
+        </div> -->
   
+        <table class="table table-hover">
+          <thead>
+          <tr>
+              <td>Name</td>
+              <td>Type</td>
+              <td>Contact</td>
+              <td>Email</td>
+              <td>Income</td>
+              <td colspan="2">Actions</td>
+          </tr>
+          </thead>
+         
+      
+          <tbody>
+              <tr *ngFor="let doctor of doctors">
+                  <td>{{ doctor.Name }}</td>
+                  <td>{{ doctor.Type }}</td>
+                  <td>{{ doctor.Contact }}</td>
+                  <td>{{ doctor.Email }}</td>
+                  <td>{{ doctor.Salary }}</td>
+                  <td><a [routerLink]="['/edit', doctors ._id]" class="btn btn-primary">Edit</a></td>
+                  <td><a (click) = "deleteDoctor(doctors._id)" class="btn btn-danger">Delete</a>
+              </tr>
+          </tbody>
+        </table>
     
      
-    </div>
+   
   

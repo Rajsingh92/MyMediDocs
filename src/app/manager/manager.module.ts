@@ -6,12 +6,16 @@ import { AddNurseComponent } from './add-nurse/add-nurse.component';
 import { AddRecComponent } from './add-rec/add-rec.component';
 import { ComplaintsComponent } from './complaints/complaints.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ModifyComponent } from './modify/modify.component';
+
 import { PComplaintComponent } from './p-complaint/p-complaint.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StatsComponent } from './stats/stats.component';
 import { ManagerRoutingModule } from './manager-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DoctorEditComponent } from './doctor-edit/doctor-edit.component';
+import { NurseEditComponent } from './nurse-edit/nurse-edit.component';
+import { MsatffEditComponent } from './msatff-edit/msatff-edit.component';
+import { RecEditComponent } from './rec-edit/rec-edit.component';
 
 
 
@@ -23,15 +27,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AddRecComponent, 
     ComplaintsComponent, 
     DashboardComponent, 
-    ModifyComponent, 
+    
     PComplaintComponent, 
     SettingsComponent, 
-    StatsComponent
+    StatsComponent, 
+    DoctorEditComponent, 
+    NurseEditComponent, 
+    MsatffEditComponent, 
+    RecEditComponent
   ],
   imports: [
     CommonModule,
     ManagerRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class ManagerModule { }

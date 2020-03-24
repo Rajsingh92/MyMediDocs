@@ -6,10 +6,13 @@ import { AddNurseComponent } from './add-nurse/add-nurse.component';
 import { AddRecComponent } from './add-rec/add-rec.component';
 import { ComplaintsComponent } from './complaints/complaints.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ModifyComponent } from './modify/modify.component';
 import { PComplaintComponent } from './p-complaint/p-complaint.component';
 import { SettingsComponent } from './settings/settings.component';
 import { StatsComponent } from './stats/stats.component';
+import { DoctorEditComponent } from './doctor-edit/doctor-edit.component';
+import { MsatffEditComponent } from './msatff-edit/msatff-edit.component';
+import { NurseEditComponent } from './nurse-edit/nurse-edit.component';
+import { RecEditComponent } from './rec-edit/rec-edit.component';
 
 
 
@@ -31,6 +34,22 @@ const routes: Routes = [
     component: AddRecComponent
   },
   {
+    path: 'edit-doctor',
+    component:DoctorEditComponent
+  },
+  {
+    path:'edit-mstaff',
+    component:MsatffEditComponent
+  },
+  {
+    path: 'edit-nurse',
+    component: NurseEditComponent
+  },
+  {
+    path:'edit-rec',
+    component: RecEditComponent
+  },
+  {
     path:'complaints',
     component:ComplaintsComponent
   },
@@ -38,10 +57,7 @@ const routes: Routes = [
     path:'dashboard',
     component: DashboardComponent
   },
-  {
-    path:'modify',
-    component:ModifyComponent
-  },
+ 
   {
     path:'p-complaint',
     component: PComplaintComponent

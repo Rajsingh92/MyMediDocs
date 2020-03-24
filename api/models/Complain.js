@@ -5,19 +5,19 @@ const Schema = mongoose.Schema;
 // Define collection and schema for Complain
 let Complain = new Schema({
   id: {
-    type: Text
+    type: String
   },
   dof: {
-    type: Text
+    type: String
   },
   name: {
-    type: Text
+    type: String
   },
   type: {
-    type: Text
+    type: String
   },
   desc: {
-    type: Text
+    type: String
   },
 },{
     collection: 'Complain'

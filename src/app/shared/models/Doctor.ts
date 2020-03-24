@@ -1,10 +1,15 @@
 export default class Doctor {
-    EmployeeName: string;
-    Sex: string;
-    Salary: string;
+    Name: string;
+    Qualification: string;
     Type: string;
-    Contact: string;
-    Email: string;
+    PrevExperience: string;
+    Salary: string;
     Address: string;
     City: string;
+    State: string;
+    Email: string;
+    AlternateEmail: string;
+    Contact: string;
+    AlternateContact: string;
+    Gender: string;
 }

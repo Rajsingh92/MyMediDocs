@@ -29,7 +29,7 @@
         </div>
       </li>
 
-      <li class="nav-item" [ngClass]="{'active' : complain.isActive || home.isActive  }">
+      <!-- <li class="nav-item" [ngClass]="{'active' : complain.isActive || home.isActive  }">
         <a class="nav-link" (click)="landing = !landing" [attr.aria-expanded]="landing" aria-controls="ui-basic">
           <span class="menu-title">landing</span>
           <i class="menu-arrow"></i>
@@ -41,7 +41,7 @@
             <li class="nav-item"> <a class="nav-link" [routerLink]="[ '/landing/home' ]" routerLinkActive="active" #home="routerLinkActive">Home</a></li>
           </ul>
         </div>
-      </li>
+      </li> -->
 
       <li class="nav-item" [ngClass]="{'active' : addDoctor.isActive || addMstaff.isActive || addNurse.isActive  || addRec.isActive  || complaints.isActive || dashboard.isActive  || modify.isActive  || pComplaint.isActive  || settings.isActive  || stats.isActive }">
         <a class="nav-link" (click)="manager = !manager" [attr.aria-expanded]="manager" aria-controls="ui-basic">

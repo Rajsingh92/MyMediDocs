@@ -7,13 +7,9 @@ import { HttpClient } from '@angular/common/http';
 export class ManagerService {
 
   manager = 'http://localhost:3000/manager';
-  mstaff = 'http://localhost:3000/mstaff';
-  nurse = 'http://localhost:3000/nurse';
-  rec = 'http://localhost:3000.rec';
+  
 
   constructor(private http: HttpClient) { }
-
-  
 
   addDoctor(Name,Qualification,Type,PrevExperience,Salary,Address,City,State,Email,AlternateEmail,Contact,AlternateContact,Gender){
     console.log(Name,Qualification,Type,PrevExperience,Salary,Address,City,State,Email,AlternateEmail,Contact,AlternateContact,Gender);
@@ -55,21 +51,93 @@ export class ManagerService {
         .subscribe(res => console.log('Done'));
   }
 
- 
+  addNurse(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender){
+    console.log(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender);
+    const obj ={
+      Name,
+      Qualification,
+      PrevExperience,
+      Salary,
+      Email,
+      AlternateEmail,
+      Contact,
+      AlternateContact,
+      Address,
+      City,
+      State,
+      Gender
+    }
 
-  getmanager() {
+    this.http.post(`${this.manager}/addNurse`, obj)
+        .subscribe(res => console.log('Done'));
+  }
+
+  addRec(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender){
+    console.log(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender);
+    const obj ={
+      Name,
+      Qualification,
+      PrevExperience,
+      Salary,
+      Email,
+      AlternateEmail,
+      Contact,
+      AlternateContact,
+      Address,
+      City,
+      State,
+      Gender
+    }
+
+    this.http.post(`${this.manager}/addRec`, obj)
+        .subscribe(res => console.log('Done'));
+  }
+
+  getComplaints(){
     return this
            .http
-           .get(`${this.manager}`);
+           .get(`${this.manager}/getComplaints`);
   }
 
-  editEmployee(id) {
+  getDoctors(){
+    return this
+           .http
+           .get(`${this.manager}/getDoctors`);
+  }
+
+  getMStaff(){
+    return this
+           .http
+           .get(`${this.manager}/getMStaff`);
+  }
+
+  getNurse(){
+    return this
+           .http
+           .get(`${this.manager}/getNurse`);
+  }
+
+  getRec(){
+    return this
+           .http
+           .get(`${this.manager}/getRec`);
+  }
+
+  deleteDoctor(id) {
+    return this
+              .http
+              .get(`${this.manager}/deleteDoctor/${id}`);
+  }
+
+ 
+
+  editDoctor(id) {
     return this
             .http
-            .get(`${this.manager}/edit/${id}`);
+            .get(`${this.manager}/editDoctor/${id}`);
   }
 
-  updateEmployee(EmployeeName, Sex, Salary,Type,Contact,Email,Address,City, id) {
+  updateDoctor(EmployeeName, Sex, Salary,Type,Contact,Email,Address,City, id) {
     const obj = {
       EmployeeName, 
       Sex, 
@@ -82,13 +150,9 @@ export class ManagerService {
     };
     this
       .http
-      .post(`${this.manager}/update/${id}`, obj)
+      .post(`${this.manager}/updateDoctor/${id}`, obj)
       .subscribe(res => console.log('Update Complete'));
   }
 
-  deleteEmployee(id) {
-    return this
-              .http
-              .get(`${this.manager}/delete/${id}`);
-  }
+ 
 }

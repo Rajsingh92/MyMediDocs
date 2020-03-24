@@ -1,15 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
-import { EmployeeEditComponent } from './test/employee-edit/employee-edit.component';
-import { EmployeeAddComponent } from './test/employee-add/employee-add.component';
-import { EmployeeGetComponent } from './test/employee-get/employee-get.component';
+
 
 
 const routes: Routes = [
   {
     path: "",
-    redirectTo: "home",
+    redirectTo: "doctors/appointment",
     pathMatch: "full"
   },
   {

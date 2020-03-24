@@ -32,5 +32,7 @@ managerRoutes.route('/complain').post(function (req, res) {
         });
 });
 
+//home
+
 
 module.exports = landingRoutes;
