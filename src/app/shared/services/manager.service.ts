@@ -51,8 +51,8 @@ export class ManagerService {
         .subscribe(res => console.log('Done'));
   }
 
-  addNurse(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender){
-    console.log(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender);
+  addNurse(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State){
+    console.log(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State);
     const obj ={
       Name,
       Qualification,
@@ -64,20 +64,17 @@ export class ManagerService {
       AlternateContact,
       Address,
       City,
-      State,
-      Gender
+      State
     }
 
     this.http.post(`${this.manager}/addNurse`, obj)
         .subscribe(res => console.log('Done'));
   }
 
-  addRec(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender){
-    console.log(Name,Qualification,PrevExperience,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender);
+  addRec(Name,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender){
+    console.log(Name,Salary,Email,AlternateEmail,Contact,AlternateContact,Address,City,State,Gender);
     const obj ={
       Name,
-      Qualification,
-      PrevExperience,
       Salary,
       Email,
       AlternateEmail,
